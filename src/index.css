@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Brand Primary Colors */
+  --color-primary-navy: #071B3A;
+  --color-deep-navy: #092A4A;
+  --color-primary-blue: #0877DC;
+  --color-bright-blue: #1687E8;
+  --color-teal: #087F98;
+  --color-cyan: #12A8CA;
+
+  /* Surfaces & Backgrounds */
+  --color-bg-paper: #F7FAFC;
+  --color-bg-white: #FFFFFF;
+  --color-bg-dark: #071B3A;
+  --color-bg-dark-alt: #092A4A;
+
+  /* Typography */
+  --color-text-primary: #253B57;
+  --color-text-muted: #66758A;
+  --color-text-light: #F7FAFC;
+  --color-text-dim: #94A6B8;
+
+  /* Borders & Dividers */
+  --color-border: #DDE6EE;
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+
+  /* Fonts */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg-paper);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}

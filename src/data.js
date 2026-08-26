@@ -1,0 +1,106 @@
+export const projects = [
+  {
+    id: 'manufacturing',
+    number: '01',
+    title: 'End-to-End Zoho Implementation for a Manufacturing Enterprise',
+    shortTitle: 'A connected operating system for manufacturing.',
+    industry: 'Manufacturing',
+    type: 'CRM / Automation',
+    categories: ['Software', 'CRM', 'Automation'],
+    description: 'Connecting marketing, sales, inventory, accounting, and support into one dependable business flow.',
+    services: ['Marketing Automation', 'Zoho CRM', 'Systems Integration'],
+    technologies: ['Zoho CRM', 'Zoho Inventory', 'Zoho Books', 'Zoho Desk'],
+    image: '',
+    challenge: 'Marketing, sales, inventory, accounting, and support operations were disconnected, making handoffs and reporting unnecessarily manual.',
+    solution: 'A connected Zoho implementation spanning lead generation, CRM, sales, inventory, accounting, and support, with website and e-commerce integration.',
+    flow: ['Lead Generation', 'CRM', 'Sales', 'Inventory', 'Accounting', 'Support'],
+    outcomes: ['Reduced manual data entry', 'Faster lead response', 'End-to-end order-to-cash visibility', 'Unified reporting'],
+    features: ['Google Ads', 'Marketing automation', 'Landing pages', 'Zoho SalesIQ', 'Website / E-commerce integration'],
+  },
+  {
+    id: 'interior-design',
+    number: '02',
+    title: 'CRM–Projects Integration for an Interior Design Studio',
+    shortTitle: 'From first conversation to finished space.',
+    industry: 'Interior Design',
+    type: 'CRM / Projects',
+    categories: ['Software', 'CRM', 'Automation'],
+    description: 'Turning scattered project documentation into a repeatable, visible handoff from sales to delivery.',
+    services: ['Process Design', 'Zoho CRM', 'Zoho Projects'],
+    technologies: ['Zoho CRM', 'Zoho Projects'],
+    image: '',
+    challenge: 'Project briefs, mood boards, approvals, revisions, contracts, and related information were scattered across emails and personal folders.',
+    solution: 'A CRM and project workflow that carries context from deal through delivery, with shared documentation, approvals, and clear ownership.',
+    flow: ['Deal', 'Project', 'Documentation', 'Approvals', 'Revisions'],
+    outcomes: ['Zero lost documentation between sales handoff and project delivery', 'Faster approval turnaround', 'Real-time pipeline visibility', 'Repeatable documented process'],
+    features: ['Custom dashboards', 'Pipeline visibility', 'Revenue forecasting', 'Team performance'],
+  },
+  {
+    id: 'retail',
+    number: '03',
+    title: 'E-commerce-Focused Zoho Implementation for a Retail Brand',
+    shortTitle: 'A clearer path from traffic to loyalty.',
+    industry: 'Retail',
+    type: 'E-commerce / CRM',
+    categories: ['Web', 'CRM', 'Automation'],
+    description: 'Building the connected foundation needed to understand customers beyond the first order.',
+    services: ['E-commerce', 'Funnel Tracking', 'Marketing Automation'],
+    technologies: ['Zoho CRM', 'Marketing Automation'],
+    image: '',
+    challenge: 'The retail brand needed a clearer view of its customer journey, from initial traffic through orders, repeat purchase, and support.',
+    solution: 'An e-commerce-focused implementation connecting website activity, funnel tracking, CRM, and marketing automation.',
+    flow: ['Traffic', 'Visits', 'Orders', 'Repeat Purchase', 'Support'],
+    outcomes: ['End-to-end funnel visibility', 'Clear insight into customer drop-off', 'Scalable e-commerce foundation'],
+    features: ['E-commerce website', 'Funnel tracking', 'Customer journey visibility', 'Marketing automation'],
+  },
+];
+
+export const capabilities = [
+  ['01', 'Web Development', 'Clear, considered digital experiences that make complex offerings easier to understand.'],
+  ['02', 'Software Development', 'Purpose-built software shaped around the way your team actually operates.'],
+  ['03', 'Mobile Applications', 'Useful mobile products that keep important workflows close to the people using them.'],
+  ['04', 'Zoho & CRM Solutions', 'Connected CRM systems that turn customer context into practical next steps.'],
+  ['05', 'Business Automation', 'Less repetitive work, more reliable handoffs, and operations that can scale.'],
+  ['06', 'API & System Integrations', 'The connective layer between tools, data, and the rest of your business.'],
+  ['07', 'UI/UX Design', 'Interfaces designed for clarity, confidence, and everyday use.'],
+  ['08', 'AI-Powered Solutions', 'Thoughtful applications of modern technology where they create real leverage.'],
+  ['09', 'Testing & Quality Assurance', 'Dependable delivery through careful validation and attention to detail.'],
+];
+
+export const principles = [
+  ['01', 'Business First', 'We start with the problem, the people, and the outcome before choosing the technology.'],
+  ['02', 'Modern Technology', 'Contemporary tools applied with judgment, not novelty for its own sake.'],
+  ['03', 'Scalable Solutions', 'Foundations that can keep pace as the business, team, and ambition grow.'],
+  ['04', 'Practical Engineering', 'Thoughtful systems built to be used, maintained, and trusted.'],
+  ['05', 'Transparent Process', 'Clear thinking, clear communication, and fewer surprises along the way.'],
+  ['06', 'Long-Term Partnership', 'A capable technology partner beyond the initial launch.'],
+];
+
+export const technologies = {
+  Frontend: ['Web experiences', 'Responsive interfaces', 'UI systems'],
+  CRM: ['Zoho CRM', 'Zoho SalesIQ', 'Zoho Projects'],
+  Operations: ['Zoho Inventory', 'Zoho Books', 'Zoho Desk'],
+  Integration: ['API integrations', 'E-commerce', 'Data workflows'],
+  Quality: ['Testing', 'Quality assurance', 'Process validation'],
+};
+
+export const industries = [
+  ['Healthcare', 'Clearer systems for teams where details matter.'],
+  ['Fintech', 'Connected experiences for complex financial workflows.'],
+  ['Retail & E-commerce', 'Digital foundations built around the customer journey.'],
+  ['Education', 'Practical tools that help people learn, work, and connect.'],
+  ['Real Estate', 'Better visibility across leads, projects, and relationships.'],
+  ['Manufacturing', 'Operations connected from first lead to final delivery.'],
+  ['Logistics', 'Systems that keep moving parts in sync.'],
+  ['Travel & Hospitality', 'Digital experiences designed for moments that matter.'],
+];
+
+export const processSteps = [
+  ['01', 'Discover', 'Understand the business, the users, and the friction in the current experience.', 'A shared view of the problem worth solving.'],
+  ['02', 'Define', 'Shape the scope, priorities, and measures of a useful solution.', 'A practical direction and delivery plan.'],
+  ['03', 'Design', 'Make the experience clear, useful, and ready for real people.', 'A considered product or workflow to build from.'],
+  ['04', 'Build', 'Develop the solution in focused increments with regular visibility.', 'Working technology that grows with confidence.'],
+  ['05', 'Test', 'Validate the details, edge cases, and experience before launch.', 'A dependable release, ready for its users.'],
+  ['06', 'Deploy', 'Bring the solution into the business with care and context.', 'A smooth handover and a team ready to use it.'],
+  ['07', 'Optimize', 'Learn from use and keep improving the parts that matter.', 'A digital foundation that stays useful.'],
+];
