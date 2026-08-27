@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, CheckCircle2, Cpu, Layers, RefreshCw, Server, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, Cpu, Database, Layers, RefreshCw, Server, ShieldCheck, Zap } from 'lucide-react';
 
 export function ProjectMockup({ project, className = '' }) {
   // If an image URL is provided in the data file, render the image
@@ -159,6 +159,84 @@ void autoSyncOrderToInventory(Bigint dealId) {
               </div>
               <div className="funnel-level level-4" style={{ width: '32%' }}>
                 <span>CHECKOUT COMPLETED — 32%</span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {project.id === 'logistics-erp' && (
+          <div className="mockup-dashboard logistics-mockup">
+            <div className="mockup-row mockup-top-stats">
+              <div className="stat-card">
+                <small>CUSTOM SOFTWARE</small>
+                <strong>Freight ERP</strong>
+                <span className="stat-status positive">35% Idle Saved</span>
+              </div>
+              <div className="stat-card">
+                <small>LIVE GPS TELEMETRY</small>
+                <strong>WebSockets</strong>
+                <span className="stat-status active">Real-Time Sync</span>
+              </div>
+              <div className="stat-card">
+                <small>DISPATCH MATCH</small>
+                <strong>AI Route Match</strong>
+                <span className="stat-status positive">Automated</span>
+              </div>
+            </div>
+
+            <div className="mockup-pipeline-visual">
+              <div className="pipeline-step active">
+                <Server size={14} />
+                <span>API Intake</span>
+              </div>
+              <div className="pipeline-arrow">→</div>
+              <div className="pipeline-step active">
+                <Cpu size={14} />
+                <span>Smart Dispatch</span>
+              </div>
+              <div className="pipeline-arrow">→</div>
+              <div className="pipeline-step active">
+                <Zap size={14} />
+                <span>GPS Telemetry</span>
+              </div>
+              <div className="pipeline-arrow">→</div>
+              <div className="pipeline-step active">
+                <CheckCircle2 size={14} />
+                <span>Digital ePOD</span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {project.id === 'healthcare-portal' && (
+          <div className="mockup-dashboard healthcare-mockup">
+            <div className="mockup-row mockup-top-stats">
+              <div className="stat-card">
+                <small>CUSTOM WEB PORTAL</small>
+                <strong>HIPAA Secure</strong>
+                <span className="stat-status positive">Encrypted DB</span>
+              </div>
+              <div className="stat-card">
+                <small>EHR INTEGRATION</small>
+                <strong>FHIR / HL7 API</strong>
+                <span className="stat-status active">0 Transcribe Errors</span>
+              </div>
+              <div className="stat-card">
+                <small>CHECK-IN SPEED</small>
+                <strong>Digital Intake</strong>
+                <span className="stat-status positive">&lt; 3 Mins</span>
+              </div>
+            </div>
+
+            <div className="mockup-stage-flow">
+              <div className="stage-item completed">
+                <CheckCircle2 size={13} /> Encrypted Digital Patient Intake
+              </div>
+              <div className="stage-item completed">
+                <CheckCircle2 size={13} /> FHIR Health Record Sync
+              </div>
+              <div className="stage-item active">
+                <RefreshCw size={13} className="spin" /> Telehealth Video Session
               </div>
             </div>
           </div>

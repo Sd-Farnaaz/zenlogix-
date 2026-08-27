@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ArrowDown, ArrowUpRight, Cpu, Layers } from 'lucide-react';
+import { ArrowDown, Cpu, Layers } from 'lucide-react';
 import { Button } from '../components/Button';
 import { ThreeHeroCanvas } from '../components/ThreeHeroCanvas';
 
@@ -75,30 +75,25 @@ export function HeroSection({ go }) {
 
           {/* Supporting Copy */}
           <p className="hero-body-text text-center">
-            We Build Practical, High-Impact Digital Solutions Across Software Development,
-            CRM Architecture, Business Automation, API Integrations, Digital Marketing, Media Creation, Web, and Mobile.
+            We Build Practical, High-Impact Digital Solutions Across Custom Software Development,
+            CRM Architecture, Business Automation, API Integrations, Digital Marketing, Growth Solutions, Web, and Mobile.
           </p>
 
           {/* Capability Pills Bar */}
           <div className="hero-capability-pills justify-center">
-            <span>Software Dev</span>
+            <span>Custom Software Development</span>
             <span className="pill-dot">•</span>
             <span>Zoho CRM</span>
             <span className="pill-dot">•</span>
-            <span>Automation</span>
+            <span>Business Automation</span>
             <span className="pill-dot">•</span>
             <span>Digital Marketing</span>
-            <span className="pill-dot">•</span>
-            <span>Content Media</span>
             <span className="pill-dot">•</span>
             <span>Web & Mobile</span>
           </div>
 
-          {/* Action CTAs */}
+          {/* Action CTA (Only Let's Talk) */}
           <div className="hero-action-buttons justify-center">
-            <Button href="/work" go={go} size="lg" cursorText="WORK">
-              View Our Work
-            </Button>
             <Button href="/contact" go={go} variant="dark" size="lg" cursorText="TALK">
               Let's Talk
             </Button>

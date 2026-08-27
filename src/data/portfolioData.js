@@ -7,7 +7,7 @@ export const projects = [
     tagline: 'Connecting Marketing, Sales, Inventory, Accounting, and Support Into One Unified Operational Backbone.',
     industry: 'Manufacturing',
     type: 'Enterprise CRM & Systems Automation',
-    categories: ['CRM', 'Software', 'Automation'],
+    categories: ['CRM', 'Automation'],
     description: 'A Complete Digital Transformation Connecting Marketing Lead Generation, Sales Pipeline, Inventory Management, Multi-Entity Accounting, and Customer Support Into an Automated End-to-End Workflow.',
     services: ['Marketing Automation', 'Zoho CRM Architecture', 'Systems Integration', 'Inventory Workflow', 'Support Portal'],
     technologies: ['Zoho CRM', 'Zoho Inventory', 'Zoho Books', 'Zoho Desk', 'Zoho Analytics', 'REST APIs'],
@@ -47,7 +47,7 @@ export const projects = [
     tagline: 'Bridging the Gap Between Initial Sales Conversations and Site Execution.',
     industry: 'Interior Design',
     type: 'CRM & Project Workflow Architecture',
-    categories: ['CRM', 'Automation', 'Software'],
+    categories: ['CRM'],
     description: 'Connecting Deal Qualification, Mood Board Approvals, Contract Signing, Project Milestone Tracking, and Site Delivery Into a Seamless Hand-Off Experience.',
     services: ['Process Engineering', 'Zoho CRM Customization', 'Zoho Projects Integration', 'Client Portal Setup'],
     technologies: ['Zoho CRM', 'Zoho Projects', 'Zoho Sign', 'Zoho WorkDrive', 'Webhooks'],
@@ -86,7 +86,7 @@ export const projects = [
     tagline: 'Building the Connected Digital Foundation to Turn Traffic Into Repeat Brand Loyalty.',
     industry: 'Retail & E-commerce',
     type: 'E-commerce Integration & Funnel Tracking',
-    categories: ['Web', 'CRM', 'Automation'],
+    categories: ['Web', 'CRM'],
     description: 'An End-to-End E-commerce and CRM Implementation Connecting Web Store Activity, Checkout Funnels, Automated Marketing Campaigns, and Customer Retention Workflows.',
     services: ['E-commerce Web Development', 'Funnel Tracking', 'Marketing Automation', 'Customer Data Integration'],
     technologies: ['Zoho CRM', 'Zoho Marketing Automation', 'Zoho SalesIQ', 'E-commerce APIs', 'Google Analytics 4'],
@@ -116,6 +116,83 @@ export const projects = [
       'Omnichannel Revenue & Funnel Analytics Dashboards',
       'Automated Post-Purchase Feedback & Loyalty Triggers'
     ]
+  },
+  {
+    id: 'logistics-erp',
+    number: '04',
+    title: 'Custom Enterprise ERP & Fleet Dispatch Platform',
+    shortTitle: 'Custom Software ERP Platform',
+    tagline: 'Streamlining Freight Operations, Fleet Dispatch, and Real-Time Driver Telemetry.',
+    industry: 'Logistics & Supply Chain',
+    type: 'Custom Software Development',
+    categories: ['Software', 'Automation'],
+    description: 'A Custom Cloud Enterprise ERP Built to Manage Freight Dispatching, Driver Assignment, Real-Time GPS Route Optimization, and Automated Customer Billing.',
+    services: ['Custom Software Development', 'Cloud Architecture', 'Fleet API Integration', 'Dispatch Automation'],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'WebSockets', 'REST APIs', 'AWS'],
+    image: '',
+    badge: 'Custom Software Case Study',
+    challenge: 'A Regional Freight Logistics Enterprise relied on outdated desktop spreadsheets and fragmented manual phone dispatching. Fleet managers struggled to match driver availability with urgent shipments, leading to idle truck hours and delayed delivery notifications.',
+    solution: 'Zenlogix engineered a bespoke web-based ERP and real-time dispatch dashboard. We built dynamic load matching algorithms, automated driver SMS notifications, real-time GPS map tracking, and instant electronic proof-of-delivery (ePOD) generation linked directly to client invoicing.',
+    architecture: [
+      { step: '01', title: 'Order Intake & Rate Matrix', desc: 'Custom API intake parsing client shipment orders and automatically calculating rate quotes based on mileage and weight.' },
+      { step: '02', title: 'Automated Dispatch Matching', desc: 'Intelligent algorithm matching shipment destinations with optimal available fleet drivers and route constraints.' },
+      { step: '03', title: 'Real-Time Driver Telemetry', desc: 'WebSocket-powered GPS tracking giving dispatchers and end clients live ETA visibility and status updates.' },
+      { step: '04', title: 'Electronic Proof of Delivery', desc: 'Mobile web portal allowing drivers to capture digital signatures and photo verification upon cargo unloading.' },
+      { step: '05', title: 'Automated Financial Settlement', desc: 'Instant invoice generation pushed directly to client portals and accounting ledgers upon job completion.' }
+    ],
+    flow: ['Shipment Intake', 'Smart Dispatch Match', 'Live GPS Telemetry', 'Digital ePOD Capture', 'Automated Settlement'],
+    outcomes: [
+      'Reduced Fleet Idle Hours by 35% Through Intelligent Route Matching',
+      'Eliminated Manual Paper Proof-of-Delivery Bottlenecks Across Dispatch Drivers',
+      'Real-Time Customer Parcel Tracking Portal Decreasing Inbound Status Calls',
+      'Automated Freight Invoicing Decreasing Days Sales Outstanding (DSO)'
+    ],
+    features: [
+      'Real-Time WebSocket GPS Fleet Tracker',
+      'Automated Dispatch & Driver Load Allocation',
+      'Mobile Driver Portal With Digital Signature Capture',
+      'Custom Multi-Entity Freight Rate Matrix',
+      'Client Live Tracking & Telemetry Dashboard',
+      'Automated Invoicing & Settlement Connectors'
+    ]
+  },
+  {
+    id: 'healthcare-portal',
+    number: '05',
+    title: 'HIPAA-Compliant Patient Intake & Healthcare Web Application',
+    shortTitle: 'Custom Healthcare Web Platform',
+    tagline: 'Modernizing Patient Onboarding, Medical Records Access, and Telehealth Appointments.',
+    industry: 'Healthcare',
+    type: 'Custom Web Application & Portal',
+    categories: ['Software', 'Web'],
+    description: 'A Secure, HIPAA-Compliant Web Portal Enabling Patients to Complete Digital Registration, View Electronic Health Records, and Schedule Telehealth Consultations.',
+    services: ['Custom Software Development', 'Web Application Development', 'HIPAA Compliance', 'API Integration'],
+    technologies: ['React', 'TypeScript', 'Secure Cloud DB', 'HL7/FHIR APIs', 'Twilio Video'],
+    image: '',
+    badge: 'Healthcare Case Study',
+    challenge: 'A Growing Healthcare Network Suffered From Long Waiting Room Delays Due to Paper Medical Forms. Patient Data Had to Be Manually Transcribed Into Electronic Health Record (EHR) Systems, Creating Administrative Overhead and Frequent Transcription Errors.',
+    solution: 'Zenlogix Designed and Engineered a High-Security Web Application. Patients Receive Encrypted Links Prior to Appointments to Fill Digital Medical History Forms. The Portal Integrates Directly With FHIR Medical Record Standards, Syncs Data to Clinical Dashboards, and Facilitates Secure Telehealth Video Consultations.',
+    architecture: [
+      { step: '01', title: 'Encrypted Patient Onboarding', desc: 'Mobile-responsive digital intake forms capturing medical history, insurance validation, and ID uploads.' },
+      { step: '02', title: 'EHR System Integration', desc: 'Bi-directional FHIR API integration syncing patient records safely with clinical EHR databases.' },
+      { step: '03', title: 'Telehealth Video Engine', desc: 'HIPAA-compliant browser-based video consultation interface with integrated physician notes.' },
+      { step: '04', title: 'Automated Appointment Reminders', desc: 'Automated SMS and email reminders reducing clinic no-show rates.' }
+    ],
+    flow: ['Encrypted Intake', 'EHR FHIR Sync', 'Physician Review', 'Telehealth Video', 'Care Summary'],
+    outcomes: [
+      'Eliminated Paper Form Intake Across Clinic Locations',
+      'Reduced Patient Waiting Room Check-In Time From 18 Minutes to Under 3 Minutes',
+      'Zero Data Transcription Errors Between Patient Submissions and Physician Charts',
+      'Increased Patient Satisfaction and Telehealth Consultation Volume'
+    ],
+    features: [
+      'HIPAA-Compliant Encrypted Cloud Architecture',
+      'FHIR & HL7 Electronic Health Record Sync',
+      'Mobile-Friendly Digital Insurance Validation',
+      'Embedded Telehealth Video Consultation Engine',
+      'Automated Appointment Scheduling & Reminders',
+      'Multi-Role Clinic Staff Access Controls'
+    ]
   }
 ];
 
@@ -132,7 +209,7 @@ export const capabilities = [
   {
     id: 'software-dev',
     number: '02',
-    title: 'Software Development',
+    title: 'Custom Software Development',
     category: 'Software',
     headline: 'Purpose-Built Business Applications Engineered Around Actual Workflows.',
     description: 'We Design Modern, Reliable Software Solutions Tailored to Your Operational Realities. From Internal Management Tools to Complex SaaS Products, We Write Clean, Maintainable Code Built for Scale.',
