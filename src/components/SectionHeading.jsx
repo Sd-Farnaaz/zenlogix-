@@ -5,7 +5,7 @@ export function SectionHeading({
   title,
   intro,
   dark = false,
-  align = 'left',
+  align = 'center',
   className = ''
 }) {
   return (

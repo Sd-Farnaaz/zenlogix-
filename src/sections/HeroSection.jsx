@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ArrowDown, ArrowUpRight, Cpu, Layers, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Cpu, Layers } from 'lucide-react';
 import { Button } from '../components/Button';
 import { ThreeHeroCanvas } from '../components/ThreeHeroCanvas';
 
@@ -55,45 +55,47 @@ export function HeroSection({ go }) {
 
   return (
     <section className="hero-editorial-section" ref={heroRef}>
-      {/* Editorial Grid */}
-      <div className="container hero-grid-layout">
+      {/* Editorial Centered Layout */}
+      <div className="container hero-centered-layout">
         {/* Text Content Column */}
-        <div className="hero-content-col">
-          {/* Eyebrow */}
+        <div className="hero-content-col text-center">
+          {/* Eyebrow Tag */}
           <div className="hero-eyebrow-tag">
             <span className="eyebrow-pulse" />
-            <span className="eyebrow-text">ZENLOGIX SOLUTIONS — DIGITAL TECHNOLOGY PARTNER</span>
+            <span className="eyebrow-text">Zenlogix Solutions — Digital Technology Partner</span>
           </div>
 
-          {/* Main Editorial Headline */}
-          <h1 className="hero-main-title">
-            <span className="hero-heading-line">Building digital</span>
-            <span className="hero-heading-line highlight-line">solutions</span>
-            <span className="hero-heading-line">that move businesses</span>
-            <span className="hero-heading-line">forward.</span>
+          {/* Centered Main Headline */}
+          <h1 className="hero-main-title text-center">
+            <span className="hero-heading-line">Building Digital</span>
+            <span className="hero-heading-line highlight-line">Solutions</span>
+            <span className="hero-heading-line">That Move Businesses</span>
+            <span className="hero-heading-line">Forward.</span>
           </h1>
 
           {/* Supporting Copy */}
-          <p className="hero-body-text">
-            We build practical, high-impact digital solutions across custom software development,
-            CRM architecture, business automation, API integrations, web, mobile, and modern tech infrastructure.
+          <p className="hero-body-text text-center">
+            We Build Practical, High-Impact Digital Solutions Across Software Development,
+            CRM Architecture, Business Automation, API Integrations, Digital Marketing, Media Creation, Web, and Mobile.
           </p>
 
           {/* Capability Pills Bar */}
-          <div className="hero-capability-pills">
+          <div className="hero-capability-pills justify-center">
             <span>Software Dev</span>
             <span className="pill-dot">•</span>
             <span>Zoho CRM</span>
             <span className="pill-dot">•</span>
             <span>Automation</span>
             <span className="pill-dot">•</span>
-            <span>API Integrations</span>
+            <span>Digital Marketing</span>
+            <span className="pill-dot">•</span>
+            <span>Content Media</span>
             <span className="pill-dot">•</span>
             <span>Web & Mobile</span>
           </div>
 
           {/* Action CTAs */}
-          <div className="hero-action-buttons">
+          <div className="hero-action-buttons justify-center">
             <Button href="/work" go={go} size="lg" cursorText="WORK">
               View Our Work
             </Button>
@@ -103,12 +105,11 @@ export function HeroSection({ go }) {
           </div>
         </div>
 
-        {/* 3D Visual Architecture Stage Column */}
+        {/* 3D Visual Stage */}
         <div className="hero-visual-col">
           <div className="hero-canvas-frame">
             <ThreeHeroCanvas />
 
-            {/* Live Systems Floating Telemetry Badge */}
             <div className="telemetry-card card-top">
               <div className="telemetry-header">
                 <Cpu size={14} />
