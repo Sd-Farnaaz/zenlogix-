@@ -11,7 +11,7 @@ export function Navbar({ currentPath, go }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -23,22 +23,26 @@ export function Navbar({ currentPath, go }) {
 
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
       gsap.to(mobileMenuRef.current, {
-        clipPath: 'circle(150% at 90% 10%)',
-        duration: 0.6,
-        ease: 'power3.inOut'
+        opacity: 1,
+        pointerEvents: 'all',
+        duration: 0.35,
+        ease: 'power2.out'
       });
       gsap.fromTo(
         menuItemsRef.current.filter(Boolean),
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.4, stagger: 0.08, ease: 'power2.out', delay: 0.2 }
+        { y: 25, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.35, stagger: 0.06, ease: 'power2.out', delay: 0.1 }
       );
     } else {
       document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
       gsap.to(mobileMenuRef.current, {
-        clipPath: 'circle(0% at 90% 10%)',
-        duration: 0.5,
-        ease: 'power3.inOut'
+        opacity: 0,
+        pointerEvents: 'none',
+        duration: 0.3,
+        ease: 'power2.in'
       });
     }
   }, [menuOpen]);
@@ -80,7 +84,7 @@ export function Navbar({ currentPath, go }) {
           })}
         </nav>
 
-        {/* Desktop CTA */}
+        {/* Desktop CTA & Mobile Hamburger */}
         <div className="navbar-actions">
           <a
             href="/contact"
@@ -95,10 +99,13 @@ export function Navbar({ currentPath, go }) {
             <ArrowUpRight size={16} />
           </a>
 
-          {/* Hamburger Toggle */}
+          {/* Mobile Hamburger Toggle */}
           <button
             className={`mobile-menu-toggle ${menuOpen ? 'is-open' : ''}`}
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen(!menuOpen);
+            }}
             aria-label={menuOpen ? 'Close Menu' : 'Open Menu'}
             aria-expanded={menuOpen}
           >
@@ -108,15 +115,21 @@ export function Navbar({ currentPath, go }) {
       </div>
 
       {/* Mobile Fullscreen Overlay */}
-      <div className="mobile-menu-overlay" ref={mobileMenuRef}>
+      <div
+        className={`mobile-menu-overlay ${menuOpen ? 'is-visible' : ''}`}
+        ref={mobileMenuRef}
+      >
         <div className="mobile-menu-header container">
           <Logo light onClick={handleNavClick} />
           <button
             className="mobile-menu-close"
-            onClick={() => setMenuOpen(false)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen(false);
+            }}
             aria-label="Close Navigation Menu"
           >
-            <X size={28} />
+            <X size={26} />
           </button>
         </div>
 
@@ -145,7 +158,7 @@ export function Navbar({ currentPath, go }) {
             className="mobile-menu-footer"
             ref={(el) => (menuItemsRef.current[navLinks.length] = el)}
           >
-            <p>Zenlogix Solutions — Digital Technology & Business Solutions</p>
+            <p>Zenlogix Solutions — Digital Technology Partner</p>
             <a
               href="/contact"
               className="mobile-cta-btn"
