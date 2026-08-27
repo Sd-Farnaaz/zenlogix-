@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, CheckCircle2, Mail, MapPin, Phone, Send } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { Footer } from '../components/Footer';
 
 export function Contact({ go }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    projectType: 'Software Development',
-    budget: '$10k – $25k',
-    message: ''
+    'Last Name': '',
+    Email: '',
+    Company: '',
+    Phone: '',
+    LEADCF2: 'Software Development',
+    LEADCF3: '$10k – $25k',
+    Description: ''
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormSubmitted(true);
   };
 
   return (
@@ -59,7 +54,7 @@ export function Contact({ go }) {
                 <CheckCircle2 size={48} className="success-icon" />
                 <h2>Message Received</h2>
                 <p>
-                  Thank you for reaching out, <strong>{formData.name}</strong>. A technical lead from Zenlogix will review your requirements and respond within 24 hours.
+                  Thank you for reaching out, <strong>{formData['Last Name']}</strong>. A technical lead from Zenlogix will review your requirements and respond within 24 hours.
                 </p>
                 <button
                   className="custom-button btn-variant-primary"
@@ -69,32 +64,41 @@ export function Contact({ go }) {
                 </button>
               </div>
             ) : (
-              <form className="contact-form-card" onSubmit={handleSubmit}>
+              <form
+                className="contact-form-card"
+                action="https://crm.zoho.in/crm/WebToLeadForm"
+                method="POST"
+              >
+                <input type="hidden" name="xnQsjsdp" value="061ff6ff89b27ffe78e507e821c5eba18344a5d508662ae20aa7b57071ddc5ba" />
+                <input type="hidden" name="zc_gad" value="" />
+                <input type="hidden" name="xmIwtLD" value="66d88afca48407ab838d2ba802680598d13671fffdb9178918cd602276ae652ed32a195987b171f71dde3454369a154e" />
+                <input type="hidden" name="actionType" value="TGVhZHM=" />
+                <input type="hidden" name="returnURL" value="https://zenlogix.onrender.com/contact" />
                 <h3 className="form-title">Project Intake Form</h3>
 
                 <div className="form-row-2col">
                   <div className="form-field">
-                    <label htmlFor="name">Full Name *</label>
+                    <label htmlFor="Last_Name">Full Name *</label>
                     <input
-                      id="name"
-                      name="name"
+                      id="Last_Name"
+                      name="Last Name"
                       type="text"
                       required
                       placeholder="e.g. Sarah Jenkins"
-                      value={formData.name}
+                      value={formData['Last Name']}
                       onChange={handleChange}
                     />
                   </div>
 
                   <div className="form-field">
-                    <label htmlFor="email">Work Email *</label>
+                    <label htmlFor="Email">Work Email *</label>
                     <input
-                      id="email"
-                      name="email"
+                      id="Email"
+                      name="Email"
                       type="email"
                       required
                       placeholder="sarah@company.com"
-                      value={formData.email}
+                      value={formData.Email}
                       onChange={handleChange}
                     />
                   </div>
@@ -102,25 +106,25 @@ export function Contact({ go }) {
 
                 <div className="form-row-2col">
                   <div className="form-field">
-                    <label htmlFor="company">Company Name</label>
+                    <label htmlFor="Company">Company Name</label>
                     <input
-                      id="company"
-                      name="company"
+                      id="Company"
+                      name="Company"
                       type="text"
                       placeholder="Company Ltd."
-                      value={formData.company}
+                      value={formData.Company}
                       onChange={handleChange}
                     />
                   </div>
 
                   <div className="form-field">
-                    <label htmlFor="phone">Phone Number</label>
+                    <label htmlFor="Phone">Phone Number</label>
                     <input
-                      id="phone"
-                      name="phone"
+                      id="Phone"
+                      name="Phone"
                       type="tel"
                       placeholder="+1 (555) 000-0000"
-                      value={formData.phone}
+                      value={formData.Phone}
                       onChange={handleChange}
                     />
                   </div>
@@ -128,49 +132,55 @@ export function Contact({ go }) {
 
                 <div className="form-row-2col">
                   <div className="form-field">
-                    <label htmlFor="projectType">Project Category</label>
+                    <label htmlFor="LEADCF2">Project Category</label>
                     <select
-                      id="projectType"
-                      name="projectType"
-                      value={formData.projectType}
+                      id="LEADCF2"
+                      name="LEADCF2"
+                      value={formData.LEADCF2}
                       onChange={handleChange}
                     >
-                      <option value="Zoho & CRM Solutions">Zoho & CRM Solutions</option>
+                      <option value="Full-Stack Web Development">Full-Stack Web Development</option>
                       <option value="Software Development">Software Development</option>
-                      <option value="Business Automation">Business Automation</option>
-                      <option value="API & System Integration">API & System Integration</option>
-                      <option value="Web Development">Web Development</option>
-                      <option value="Mobile Applications">Mobile Applications</option>
-                      <option value="Other Technology Request">Other Technology Request</option>
+                      <option value="Backend & API Development">Backend & API Development</option>
+                      <option value="Frontend Development">Frontend Development</option>
+                      <option value="App Development">App Development</option>
+                      <option value="CRM & Zoho Solutions">CRM & Zoho Solutions</option>
+                      <option value="Business & Workflow Automation">Business & Workflow Automation</option>
+                      <option value="AI & Modern Technology">AI & Modern Technology</option>
+                      <option value="Deployment & Engineering">Deployment & Engineering</option>
+                      <option value="Testing & Maintenance">Testing & Maintenance</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
 
                   <div className="form-field">
-                    <label htmlFor="budget">Estimated Budget</label>
+                    <label htmlFor="LEADCF3">Estimated Budget</label>
                     <select
-                      id="budget"
-                      name="budget"
-                      value={formData.budget}
+                      id="LEADCF3"
+                      name="LEADCF3"
+                      value={formData.LEADCF3}
                       onChange={handleChange}
                     >
-                      <option value="Under $10k">Under $10k</option>
+                      <option value="$1k – $5k">$1k – $5k</option>
+                      <option value="$5k – $10k">$5k – $10k</option>
                       <option value="$10k – $25k">$10k – $25k</option>
                       <option value="$25k – $50k">$25k – $50k</option>
-                      <option value="$50k+">$50k+</option>
-                      <option value="Not Sure Yet">Not Sure Yet</option>
+                      <option value="$50k – $100k">$50k – $100k</option>
+                      <option value="$100k+">$100k+</option>
+                      <option value="Not Sure">Not Sure</option>
                     </select>
                   </div>
                 </div>
 
                 <div className="form-field full-width">
-                  <label htmlFor="message">Project Context / Requirements *</label>
+                  <label htmlFor="Description">Project Context / Requirements *</label>
                   <textarea
-                    id="message"
-                    name="message"
+                    id="Description"
+                    name="Description"
                     rows={5}
                     required
                     placeholder="Describe your current setup, challenges, goals, or specifications..."
-                    value={formData.message}
+                    value={formData.Description}
                     onChange={handleChange}
                   />
                 </div>
